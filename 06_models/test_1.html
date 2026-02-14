@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Tester</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h2>Iris Flower Prediction</h2>
+    <p>Enter 4 features (e.g., 5.1, 3.5, 1.4, 0.2):</p>
+    <input type="text" id="features" value="5.1, 3.5, 1.4, 0.2" style="width: 250px;">
+    <button onclick="runPredict()">Predict</button>
+    
+    <h3>Result:</h3>
+    <pre id="output" style="background: #eee; padding: 10px;"></pre>
+
+    <script>
+        async function runPredict() {
+            const featureString = document.getElementById('features').value;
+            const featureArray = featureString.split(',').map(Number);
+
+            const payload = {
+                features: featureArray,
+                model_path: "my_model_logistic.pkl"
+            };
+
+            const response = await fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(result, null, 2);
+        }
+    </script>
+</body>
+</html>

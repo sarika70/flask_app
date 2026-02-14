@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Flask Predict Tester</h2>
+    <button onclick="sendData()">Send Test Request</button>
+    <p id="response"></p>
+
+    <script>
+        async function sendData() {
+            const testData = {
+                features: [5.1, 3.5, 1.4, 0.2],
+                model_path: "my_model.pkl"
+            };
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(testData)
+                });
+                const result = await response.json();
+                document.getElementById('response').innerText = JSON.stringify(result, null, 2);
+            } catch (error) {
+                document.getElementById('response').innerText = 'Error: ' + error;
+            }
+        }
+    </script>
+</body>
+</html>

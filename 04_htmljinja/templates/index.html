@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Courses</title>
+        {% else %}
+        <title>Welcome to MyCourses</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Hi, {{ user_all.username }}!</h1>
+        {% for course in courses_all %}
+        <div><p>{{ course.trainer.trainername }} Offers: <b>{{ course.details }}</b></p></div>
+        {% endfor %}
+    </body>
+</html>

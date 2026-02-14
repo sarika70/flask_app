@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Flask API Tester</h2>
+    <button onclick="fetchGuests()">View Guestbook (GET)</button>
+    <hr>
+    <input type="text" id="name" placeholder="Name">
+    <button onclick="sendGuest()">Post Name (POST)</button>
+    
+    <pre id="output"></pre>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:5000/guests';
+
+        async function fetchGuests() {
+            const res = await fetch(API_URL);
+            const data = await res.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        }
+
+        async function sendGuest() {
+            const name = document.getElementById('name').value;
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ name: name })
+            });
+            const data = await res.json();
+            fetchGuests(); // Refresh the list
+        }
+    </script>
+</body>
+</html>
