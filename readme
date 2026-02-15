@@ -1,119 +1,67 @@
-# Flask Learning Projects 🚀
+# 🌐 Flask Web Application
 
-This repository contains a collection of Flask mini-projects and examples demonstrating core Flask concepts such as routing, HTML templates, Jinja, GET/POST methods, and basic machine learning model integration.
+## 📌 Project Description
 
-## 📁 Project Structure
+This is a web application built using Flask that provides backend functionality with a simple and interactive user interface.
+
+## 🚀 Features
+
+* Web-based interface
+* Backend with Flask
+* Dynamic routing
+* Form handling
+* Database integration (if used)
+
+## 🛠️ Tech Stack
+
+* Python
+* Flask
+* HTML, CSS
+* SQLite / MySQL (optional)
+
+## 📂 Project Structure
 
 ```
-flask_app/
-│
-├── 01_simple/            # Basic Flask app (Hello World)
-├── 02_htmlreturn/        # Returning HTML from Flask
-├── 03_htmltemplates/     # Flask with HTML Templates
-├── 04_htmljinja/         # Jinja Templating Examples
-├── 05_get_post/          # GET & POST Request Handling
-├── 06_models/            # Flask + Machine Learning Models
+flask-app/
+│── app.py
+│── templates/
+│── static/
+│── requirements.txt
+│── README.md
 ```
 
----
+## ⚙️ How to Run the App
 
-## 🔥 Features
+1. Clone the repository:
 
-* Simple Flask application setup
-* HTML rendering using templates
-* Jinja templating engine
-* API testing with GET and POST methods
-* Machine Learning model integration with Flask
-* Beginner-friendly structured examples
-
----
-
-## 🛠️ Technologies Used
-
-* Python 🐍
-* Flask 🌐
-* HTML & Jinja Templates
-* Machine Learning (Pickle Models)
-
----
-
-## ▶️ How to Run the Project
-
-### Step 1: Clone the Repository
-
-```bash
+```
 git clone https://github.com/sarika70/flask_app.git
-cd flask_app
 ```
 
-### Step 2: Install Requirements (if needed)
+2. Install dependencies:
 
-```bash
+```
 pip install flask
 ```
 
-### Step 3: Run Any Flask App
+3. Run the application:
 
-Example:
-
-```bash
-cd 01_simple
+```
 python app.py
 ```
 
-Then open in browser:
+4. Open browser:
 
 ```
 http://127.0.0.1:5000/
 ```
 
----
+## 🎯 Future Enhancements
 
-## 📚 Learning Modules Included
-
-### 1️⃣ Simple Flask App
-
-Basic Flask setup and routing.
-
-### 2️⃣ HTML Return
-
-Returning HTML responses directly from Flask.
-
-### 3️⃣ HTML Templates
-
-Using templates folder with Flask.
-
-### 4️⃣ Jinja Templates
-
-Dynamic HTML using Jinja templating engine.
-
-### 5️⃣ GET & POST Methods
-
-Handling form data and API requests.
-
-### 6️⃣ ML Model Integration
-
-Using trained `.pkl` machine learning models inside Flask apps.
-
----
+* Add user authentication
+* Deploy on cloud (Render/Heroku)
+* Improve UI design
 
 ## 👩‍💻 Author
 
-**Sarika**
-GitHub: https://github.com/sarika70
-
----
-
-## ⭐ Future Improvements
-
-* Add requirements.txt
-* Deploy on Render/Heroku
-* Add CSS styling
-* Add API documentation
-* Improve UI design
-
----
-
-## 📌 Note
-
-This project is created for learning Flask development and understanding web application fundamentals with Python.
+Sarika | Flask Developer
